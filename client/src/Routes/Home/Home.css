@@ -1,0 +1,18 @@
+.container {
+  margin: 50px, auto;
+  text-align: center;
+}
+.main-title {
+  font-weight: 800;
+  font-family: 'Special Elite', cursive;
+  font-size: 3rem;
+}
+.search {
+  width: 80%;
+  height: 40px;
+  font-size: 1.4rem;
+  border-radius: 6px;
+  word-spacing: 6px;
+  letter-spacing: 5px;
+  text-align: center;
+}

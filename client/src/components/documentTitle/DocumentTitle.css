@@ -1,0 +1,15 @@
+.title {
+  cursor: pointer;
+  color: black;
+  font-size: 1.6rem;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  width: 100%;
+}
+.card {
+  margin: 0, auto;
+  /* padding: 2px; */
+  width: 400;
+  text-align: center;
+}
