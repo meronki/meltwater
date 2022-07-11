@@ -39,7 +39,6 @@ export function CensorForm({ data }) {
       navigate('/classified', {
         state: { classifiedData: classified, title: data.title },
       });
-      console.log('problem');
     }, 0);
   };
 
