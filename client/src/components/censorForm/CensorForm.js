@@ -6,8 +6,10 @@ import { cleaner, replacer } from '../../Helpers/textProcessor';
 export function CensorForm({ data }) {
   const navigate = useNavigate();
   const [inputData, setInputData] = useState('');
-  const [classified, setClassified] = useState();
-  const [displayClassified, setDisplayClassified] = useState(false);
+  const [classified, setClassified] = useState({
+    data: [],
+    displayClassified: false,
+  });
   const inputRef = useRef();
 
   useEffect(() => {
@@ -29,15 +31,14 @@ export function CensorForm({ data }) {
     e.preventDefault();
     if (inputData) {
       const newData = replacer(data.description, inputData);
-      setClassified(newData);
-      setDisplayClassified(true);
+      setClassified({ data: newData, displayClassified: true });
     }
   };
 
   const displayClassifiedDocument = () => {
     setTimeout(() => {
       navigate('/classified', {
-        state: { classifiedData: classified, title: data.title },
+        state: { classifiedData: classified.data, title: data.title },
       });
     }, 0);
   };
@@ -59,7 +60,7 @@ export function CensorForm({ data }) {
           <button onClick={clickHandler}>Censor Text</button>
         </div>
       </form>
-      {displayClassified ? displayClassifiedDocument() : null}
+      {classified.displayClassified ? displayClassifiedDocument() : null}
     </div>
   );
 }

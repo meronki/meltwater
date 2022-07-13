@@ -11,7 +11,7 @@ export const cleaner = (inputText) => {
 export const replacer = (data, inputData) => {
   let newData = data;
   for (let i = 0; i < inputData.length; i++) {
-    var regEx = new RegExp(inputData[i], 'ig');
+    let regEx = new RegExp(inputData[i], 'ig');
     newData = newData.replace(regEx, 'xxxx');
   }
   return newData;
