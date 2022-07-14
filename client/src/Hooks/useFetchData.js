@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export function FetchData() {
+export function useFetchData() {
   const [doc, setDoc] = useState([]);
 
   useEffect(() => {
@@ -16,5 +16,3 @@ export function FetchData() {
   }, []);
   return { doc };
 }
-
-export default FetchData;

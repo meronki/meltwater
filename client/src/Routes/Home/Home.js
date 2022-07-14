@@ -1,11 +1,11 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import { DocumentTitle } from '../../components/documentTitle/DocumentTitle';
-import { FetchData } from '../../Hooks/FetchData';
+import { useFetchData } from '../../Hooks/useFetchData';
 import './Home.css';
 
 export function Home() {
   const [search, setSearch] = useState();
-  const { doc } = FetchData();
+  const { doc } = useFetchData();
 
   const searchHandler = (e) => {
     e.preventDefault();
